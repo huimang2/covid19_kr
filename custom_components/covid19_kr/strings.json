@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Pick a si/do to monitor",
-        "data": { "sido": "Si/Do" }
+        "data": { "sido": "Si·Do" }
       },
       "city": {
         "title": "Pick a city to monitor",
