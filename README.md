@@ -73,4 +73,6 @@
 - 경북: https://gb.go.kr/corona_main.htm
 - 경남: http://xn--19-q81ii1knc140d892b.kr/main/main.do
 
-<br>
+[version-shield]: https://img.shields.io/badge/version-v1.1.1-orange.svg
+[hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
+[hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
