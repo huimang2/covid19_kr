@@ -129,7 +129,7 @@ async def get_coordinator(
                 } 
             elif sido == "강원":
                 data[city] = {
-                    "누적확진자": [x.text for x in soup.select('#main > div.inner > div.condition > div > table > tbody > tr:nth-child(2) > td:nth-child(n+2)') + soup.select('#main > div.inner > div.condition > div > table > tbody > tr:nth-child(4) > td')][SIDO_LIST[sido]['city'].index(city)].replace(',',''),
+                    "누적확진자": [x.text for x in cr.select('#main > div.inner > div.condition > div > table > tbody > tr:nth-child(2) > td:nth-child(n+2)') + cr.select('#main > div.inner > div.condition > div > table > tbody > tr:nth-child(4) > td')][SIDO_LIST[sido]['city'].index(city)].replace(',',''),
                     "attribute": {
                         "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) for i, x in enumerate(re.split('[^0-9]', cr.select_one('#main > div.inner > div.condition > h3 > span').text)) if x), "%Y%m%d%H")
                     }
