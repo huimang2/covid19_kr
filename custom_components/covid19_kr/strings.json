@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "Pick a si/do to monitor",
+        "title": "Pick a si·do to monitor",
         "data": { "sido": "Si·Do" }
       },
       "city": {
