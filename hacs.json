@@ -1,0 +1,6 @@
+{
+  "name": "[KR] 국내 코로나 현황",
+  "country": "KR",
+  "domains": ["sensor"],
+  "render_readme": true
+}
