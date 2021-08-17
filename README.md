@@ -37,7 +37,7 @@
 
 
 ### 지원현황
-| 도(광역시) | 시·군·구 |
+| 도·광역시 | 시·군·구 |
 | :-----: | :-----: |
 | 전국 ||
 | 서울 | 강남구, 강동구, 강북구, 강서구, 관악구, 광진구, 구로구, <br> 금천구, 노원구, 도봉구, 동대문구, 동작구, 마포구 , 서대문구, <br> 서초구, 성동구, 성북구, 송파구, 양천구, 영등포구, 용산구, <br> 은평구, 종로구, 중구, 중랑구, 기타 |
@@ -58,5 +58,18 @@
 | 경남 | 창원, 진주, 통영, 사천, 김해, 밀양, 거제, 양산, 의령, 함안, <br> 창녕, 고성, 남해, 하동, 산청, 함양, 거창, 합천 |
 | 제주 | |
 | 검역 | |
+
+<br>
+
+## 데이터 수집 사이트
+- 전국 / 도·광역시: http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13
+- 서울: https://www.seoul.go.kr/coronaV/coronaStatus.do
+- 부산: https://www.busan.go.kr/covid19/Corona19.do
+- 인천: https://www.incheon.go.kr/covid19/index
+- 울산: https://covid19.ulsan.go.kr/index.do
+- 경기: https://www.gg.go.kr/contents/contents.do?ciIdx=1150&menuId=2909
+- 강원: http://www.provin.gangwon.kr/covid-19.html
+- 경북: https://gb.go.kr/corona_main.htm
+- 경남: http://xn--19-q81ii1knc140d892b.kr/main/main.do
 
 <br>
