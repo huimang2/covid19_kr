@@ -25,7 +25,7 @@
 ### HACS
 - HACS > Integretions > 우측상단 메뉴 > Custom repositories 선택
 - 'https://github.com/huimang2/covid19_kr' 주소 입력, Category에 'integration' 선택 후, 저장
-- HACS > Integretions 메뉴 선택 후, '국내 코로나 현황' 검색하여 설치
+- HACS > Integretions 메뉴 선택 후, '[KR] 코로나 현황' 검색하여 설치
 
 <br>
 
