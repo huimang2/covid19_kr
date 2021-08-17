@@ -78,7 +78,8 @@ async def get_coordinator(
                             ATTRIBUTE[1]: selector(4),
                             ATTRIBUTE[2]: selector(2),
                         },
-                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) for i, x in enumerate(re.split('[^0-9]', cr.select_one('#content > div > div.timetable > p > span').text)) if x), "%Y%m%d%H")
+                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) \
+                            for i, x in enumerate(re.split('[^0-9]', cr.select_one('#content > div > div.timetable > p > span').text)) if x), "%Y%m%d%H")
                     },
                 }
 
@@ -87,7 +88,8 @@ async def get_coordinator(
                     sensor[0]: selector('3n'),
                     sensor[1]: selector('3n+2'),
                     "attribute": {
-                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) for i, x in enumerate(re.split('[^0-9]', cr.select_one('#move-cont1 > p > strong').text)) if x), "%Y%m%d%H")
+                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) \ 
+                            for i, x in enumerate(re.split('[^0-9]', cr.select_one('#move-cont1 > p > strong').text)) if x), "%Y%m%d%H")
                     }
                 }
 
@@ -96,7 +98,8 @@ async def get_coordinator(
                     sensor[0]: selector(1),
                     sensor[1]: selector(2),
                     "attribute": {
-                        "last_update": datetime.strptime(''.join([str(datetime.now().year)] + [str(format(int(x), '02')) for i, x in enumerate(re.split('[^0-9]', cr.select_one('#covid-state-area > div > div.covid-state-prevent > p > span').text)) if x]), "%Y%m%d%H")
+                        "last_update": datetime.strptime(str(datetime.now().year) + ''.join(str(format(int(x), '02')) \ 
+                            for i, x in enumerate(re.split('[^0-9]', cr.select_one('#covid-state-area > div > div.covid-state-prevent > p > span').text)) if x), "%Y%m%d%H")
                     }
                 }
 
@@ -105,7 +108,8 @@ async def get_coordinator(
                     sensor[0]: selector(4),
                     sensor[1]: selector(3),
                     "attribute": {
-                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) for i, x in enumerate(re.split('[^0-9]', cr.select_one('#content > div > div > div > div > div:nth-child(1) > p.covid-contents__data > b').text)) if x), "%Y%m%d%H%M")
+                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) \
+                            for i, x in enumerate(re.split('[^0-9]', cr.select_one('#content > div > div > div > div > div:nth-child(1) > p.covid-contents__data > b').text)) if x), "%Y%m%d%H%M")
                     }
                 }
 
@@ -114,7 +118,8 @@ async def get_coordinator(
                     sensor[0]:  selector(1),
                     sensor[1]:  selector(2),
                     "attribute": {
-                        "last_update": datetime.strptime(''.join([str(datetime.now().year)] + [str(format(int(x), '02')) for i, x in enumerate(re.split('[^0-9]', cr.select_one('body > div.corona_wrap > div > div > div:nth-child(1) > div.top_area > p').text)) if x]), "%Y%m%d%H")
+                        "last_update": datetime.strptime(str(datetime.now().year) + ''.join(str(format(int(x), '02')) \
+                            for i, x in enumerate(re.split('[^0-9]', cr.select_one('body > div.corona_wrap > div > div > div:nth-child(1) > div.top_area > p').text)) if x), "%Y%m%d%H")
                     }
                 }
 
@@ -129,30 +134,37 @@ async def get_coordinator(
                             ATTRIBUTE[1]: selector(4),
                             ATTRIBUTE[2]: selector(1),
                         },
-                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) for i, x in enumerate(re.split('[^0-9]', cr.select_one('#result > div.s-w-covid19 > section > h3 > small').text)) if x), "%Y%m%d%H%M")
+                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) \ 
+                            for i, x in enumerate(re.split('[^0-9]', cr.select_one('#result > div.s-w-covid19 > section > h3 > small').text)) if x), "%Y%m%d%H%M")
                     },
                 } 
+                
             elif sido == "강원":
                 data[city] = {
                     sensor[1]: selector(0),
                     "attribute": {
-                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) for i, x in enumerate(re.split('[^0-9]', cr.select_one('#main > div.inner > div.condition > h3 > span').text)) if x), "%Y%m%d%H")
+                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) \ 
+                            for i, x in enumerate(re.split('[^0-9]', cr.select_one('#main > div.inner > div.condition > h3 > span').text)) if x), "%Y%m%d%H")
                     }
                 }
+                
             elif sido == "경북":
                 data[city] = {
                     sensor[0]: selector('span'),
                     sensor[1]: selector('strong'),
                     "attribute": {
-                        "last_update": datetime.strptime(''.join(str(format(int(x), '02')) for i, x in enumerate(re.split('[^0-9]', cr.select_one('#contents > div.status > div:nth-child(1) > div.status_tit > dl > dd').text)) if x), "%y%m%d%H%M")
+                        "last_update": datetime.strptime(''.join(str(format(int(x), '02')) \ 
+                            for i, x in enumerate(re.split('[^0-9]', cr.select_one('#contents > div.status > div:nth-child(1) > div.status_tit > dl > dd').text)) if x), "%y%m%d%H%M")
                     }
                 }
+                
             elif sido == "경남":
                 data[city] = {
                     sensor[0]: selector(2),
                     sensor[1]: selector(1),
                     "attribute": {
-                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) for i, x in enumerate(re.split('[^0-9]', cr.select_one('#subCnt > div:nth-child(3) > a > div > div.top_area > p.exp').text)) if x), "%Y%m%d%H")
+                        "last_update": datetime.strptime(''.join(str(format(int(x), '02' if i else '04')) \ 
+                            for i, x in enumerate(re.split('[^0-9]', cr.select_one('#subCnt > div:nth-child(3) > a > div > div.top_area > p.exp').text)) if x), "%Y%m%d%H")
                     }
                 }
 
