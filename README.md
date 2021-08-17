@@ -1,5 +1,9 @@
 # 국내 코로나 현황 for HA
 
+![HAKC)][hakc-shield]
+![HACS][hacs-shield]
+![Version v1.4][version-shield]
+
 국내 코로나 현황 컴포넌트입니다. <br>
 보건복지부 및 각 지자체 홈페이지에서 현황을 크롤링하여 센서로 표시합니다. <br>
 
