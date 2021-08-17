@@ -9,10 +9,6 @@
 
 통합구성요소를 지원하며, 시/도별 현황 및 도시별 현황을 각각 표시할 수 있습니다. <br>
 
-![screenshot_1](https://github.com/huimang2/covid19_kr/blob/main/images/covid_19_1.png?raw=true)<br>
-![screenshot_2](https://github.com/huimang2/covid19_kr/blob/main/images/covid_19_2.png?raw=true)<br>
-![screenshot_3](https://github.com/huimang2/covid19_kr/blob/main/images/covid_19_3.png?raw=true)<br>
-
 <br>
 
 ## Version history
