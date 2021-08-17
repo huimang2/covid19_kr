@@ -1,6 +1,6 @@
 {
   "domain": "covid19_kr",
-  "name": "국내 코로나 현황",
+  "name": "[KR]COVID-19 Status",
   "config_flow": true,
   "documentation": "https://github.com/huimang2/covid19_kr",
   "requirements": ["beautifulsoup4==4.9.3"],
