@@ -4,15 +4,7 @@ from homeassistant.const import ATTR_ATTRIBUTION
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from . import get_coordinator
-from .const import DOMAIN, BRAND, MODEL, ATTRIBUTION, SW_VERSION
-
-SENSORS = {
-    "누적확진자": "mdi:emoticon-neutral-outline",
-    "신규확진자": "mdi:emoticon-sad-outline",
-    "격리자": "mdi:emoticon-cry-outline",
-    "격리해제": "mdi:emoticon-happy-outline",
-    "사망자": "mdi:emoticon-dead-outline",
-}
+from .const import DOMAIN, BRAND, MODEL, ATTRIBUTION, SW_VERSION, SENSORS
 
 
 async def async_setup_entry(hass, config_entry, async_add_entities):
