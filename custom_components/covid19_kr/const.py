@@ -14,10 +14,6 @@ SENSORS = {
     "사망자": "mdi:emoticon-dead-outline",
 }
 
-DEVICE_UPDATE = "update"
-DEVICE_REG = "register"
-DEVICE_UNREG = "unregister"
-
 ATTRIBUTE = [ "국내발생", "해외유입", "합계" ]
 
 SENSORS_LIST = list(SENSORS)
