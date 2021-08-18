@@ -8,12 +8,13 @@
         "step": {
             "user": {
                 "data": {
-                    "sido": "\uC2DC·\uB3C4"
+                "sido": "\uC2DC·\uB3C4"
                 },
                 "title": "\uBAA8\uB2C8\uD130\uB9C1 \uD560 \uC2DC·\uB3C4\uB97C \uC120\uD0DD\uD558\uAE30"
             },
             "city": {
                 "data": {
+                    "sido": "\uC2DC·\uB3C4",
                     "city": "\uB3C4\uC2DC"
                 },
                 "title": "\uBAA8\uB2C8\uD130\uB9C1 \uD560 \uB3C4\uC2DC\uB97C \uC120\uD0DD\uD558\uAE30"
