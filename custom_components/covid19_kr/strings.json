@@ -8,7 +8,7 @@
       },
       "city": {
         "title": "Pick a city to monitor",
-        "data": { "city": "City" }
+        "data": { "sido": "Si·Do", "city": "City" }
       }
     },
     "abort": {
