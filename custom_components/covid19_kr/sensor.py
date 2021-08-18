@@ -5,8 +5,7 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from . import get_coordinator
 from .const import DOMAIN, BRAND, MODEL, ATTRIBUTION, SW_VERSION, SENSORS
-import logging
-_LOGGER = logging.getLogger(__name__)
+
 
 async def async_setup_entry(hass, config_entry, async_add_entities):
     """Defer sensor setup to the shared sensor module."""
