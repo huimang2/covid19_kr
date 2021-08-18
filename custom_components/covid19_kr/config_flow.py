@@ -9,29 +9,25 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
     VERSION = 1
 
-    def __init__(self):
-        """Initialize a new covid19_kr ConfigFlow."""
-        self.options = {}
-
     async def async_step_user(self, user_input = None):
         """Handle the initial step."""
         errors = {}
 
-        if user_input is not None:
-            sido = user_input.get("sido", "전국")
-            self.options.update({"sido": sido})
+        if user_input is not None and (sido := user_input.get("sido")) is not None and sido in SIDO_LIST:
 
             if not SIDO_LIST[sido]["city"]: 
-                self.options.update({"city": sido})
+                user_input["city"] = sido
                 return self.async_create_entry(
-                    title=sido, data=self.options
+                    title=sido, data=user_input
                 )
 
-            return await self.async_step_city()
+            return await self.async_step_city(user_input)
 
         return self.async_show_form(
             step_id="user",
-            data_schema=vol.Schema({vol.Required("sido"): vol.In(list(SIDO_LIST.keys()))}),
+            data_schema=vol.Schema({
+                vol.Required("sido"): vol.In(list(SIDO_LIST.keys()))
+            }),
             errors=errors,
         )
 
@@ -39,21 +35,22 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         """Handle input of city."""
         errors = {}
 
-        if user_input is not None:
-            city = user_input.get("city", self.options["sido"])
-            self.options.update({"city": city})
+        if user_input is not None and (sido := user_input.get("sido")) is not None and (city := user_input.get("city")) is not None and city in SIDO_LIST[sido]["city"]:
 
             await self.async_set_unique_id(city)
             self._abort_if_unique_id_configured()
 
             return self.async_create_entry(
-                title=city, data=self.options
+                title=city, data=user_input
             )
-
-        CITY_LIST = [self.options["sido"]] + SIDO_LIST[self.options["sido"]]["city"]
+        
+        CITY_LIST = [sido] + SIDO_LIST[sido]["city"] if user_input is not None and sido is not None else []
 
         return self.async_show_form(
             step_id="city",
-            data_schema=vol.Schema({vol.Required("city"): vol.In(CITY_LIST)}),
+            data_schema=vol.Schema({
+                vol.Required("sido"): sido,
+                vol.Required("city"): vol.In(CITY_LIST)
+            }),
             errors=errors,
         )
