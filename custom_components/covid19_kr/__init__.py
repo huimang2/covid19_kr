@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers import update_coordinator
+from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from .const import DOMAIN, SIDO_LIST
@@ -43,9 +43,7 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     return await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
 
 
-async def get_coordinator(
-    hass: HomeAssistant, entry: ConfigEntry
-) -> update_coordinator.DataUpdateCoordinator:
+async def get_coordinator(hass: HomeAssistant, entry: ConfigEntry) -> DataUpdateCoordinator:
     """Get the data update coordinator."""
 
     sido = entry.data.get("sido")
@@ -95,7 +93,7 @@ async def get_coordinator(
 
             return data
 
-    hass.data[DOMAIN][city] = update_coordinator.DataUpdateCoordinator(
+    hass.data[DOMAIN][city] = DataUpdateCoordinator(
         hass,
         logging.getLogger(__name__),
         name=DOMAIN,
