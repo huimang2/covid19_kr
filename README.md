@@ -21,6 +21,7 @@
 | v1.1.1  | 2020.08.17  | 오류 수정 |
 | v1.2.0  | 2020.08.18  | 코드 수정 |
 | v1.2.1  | 2020.08.19  | 코드 수정 |
+| v1.2.2  | 2020.08.22  | 오류 수정 |
 
 <br>
 
@@ -79,6 +80,6 @@
 - 경북: https://gb.go.kr/corona_main.htm
 - 경남: http://xn--19-q81ii1knc140d892b.kr/main/main.do
 
-[version-shield]: https://img.shields.io/badge/version-v1.2.1-orange.svg
+[version-shield]: https://img.shields.io/badge/version-v1.2.2-orange.svg
 [hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
