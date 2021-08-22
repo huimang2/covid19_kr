@@ -47,7 +47,7 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             self.data = {}
             return await self.async_step_user()
 
-        if (city := self.data.get("city")) is not None and city in SIDO_LIST[sido]["city"]:
+        if (city := self.data.get("city")) is not None and city in SIDO_LIST[sido]["city"] or sido == city:
 
             await self.async_set_unique_id(city)
             self._abort_if_unique_id_configured()
