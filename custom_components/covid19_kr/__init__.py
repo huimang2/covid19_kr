@@ -86,7 +86,7 @@ async def get_coordinator(hass: HomeAssistant, entry: ConfigEntry) -> DataUpdate
 
             data.update({
                 "attribute": { s: (lambda x: { attribute[x][0][n]: selector(attribute[x][1][n]) for n in range(len(attribute[x][0])) })(s) for s in attribute },
-                "last_update": datetime.strptime(str(datetime.now().year) if _sido in ["부산", "울산"] else "" + \
+                "last_update": datetime.strptime((str(datetime.now().year) if _sido in ["부산", "울산"] else "") + \
                     ''.join(str(format(int(x), '02' if i or _sido in ["부산", "울산", "경북"] else '04')) \
                     for i, x in enumerate(re.split('[^0-9]', cr.select_one(SIDO_LIST[_sido]['last_update']).text)) if x), "%Y%m%d%H" + ("%M" if _sido in ["인천", "경기", "경북"] else ""))
             })
