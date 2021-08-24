@@ -3,7 +3,7 @@
 DOMAIN = "covid19_kr"
 BRAND = "HUIMANG2"
 MODEL = "COVID-19(KR)"
-SW_VERSION = "1.2.7"
+SW_VERSION = "1.2.8"
 ATTRIBUTION = "30분에 1번씩 보건복지부 크롤링"
 
 SENSORS = {
@@ -25,16 +25,17 @@ SIDO_LIST = {
         "city": [],
         "url": "http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13",
         "selector": "#content > div > div.data_table.midd.mgt24 > table > tbody > tr > td:nth-of-type({})",
-        "sensor": (SENSORS_LIST, [2, 5, 6, 7, 8]),
+        "sensor": (SENSORS_LIST, [1, 4, 5, 6, 7]),
         "attribute": {
-            SENSORS_LIST[0]: (SELECTED_ATTIBUTE([0, 1, 2]), [3, 4, 2]),
+            SENSORS_LIST[0]: (SELECTED_ATTIBUTE([0, 1, 2]), [2, 3, 1]),
         },
         "last_update": "#content > div > div.timetable > p > span"
     },
     "서울": {
         "city": ["강남구", "강동구", "강북구", "강서구", "관악구", "광진구", "구로구", "금천구", "노원구", "도봉구", "동대문구", "동작구", "마포구 ", " 서대문구", "서초구", "성동구", "성북구", "송파구", "양천구", "영등포구", "용산구", "은평구", "종로구", "중구", "중랑구", "기타"],
         "url": "https://www.seoul.go.kr/coronaV/coronaStatus.do",
-        "selector": "#move-cont1 > div:nth-of-type(3) > table.tstyle-status.pc.pc-table > tbody > tr:nth-of-type({}) > td",
+        "selector": "#move-cont1 > div:nth-of-type(2) > table.tstyle-status.pc.pc-table > tbody > tr:nth-of-type({}) > td",
+
         "sensor": (SELECTED_SENSORS([0,1]), ['3n', '3n+2']),
         "last_update": "#move-cont1 > p > strong"
     },
@@ -53,7 +54,7 @@ SIDO_LIST = {
         "city": ["중구", "동구", "미추홀구", "연수구", "남동구", "부평구", "계양구", "서구", "강화군", "옹진군", "기타"], 
         "url": "https://www.incheon.go.kr/covid19/index",
         "selector": "#content > div > div > div > div > div:nth-of-type(2) > div > table > tr:nth-of-type({}) > td:nth-of-type(n+3)",
-        "sensor": (SELECTED_SENSORS([0,1]), [4, 3]),
+        "sensor": (SELECTED_SENSORS([0,1]), [3, 2]),
         "last_update": "#content > div > div > div > div > div:nth-of-type(1) > p.covid-contents__data > b"
     },
     "광주": {
@@ -81,8 +82,11 @@ SIDO_LIST = {
     "경기": {
         "city": ["수원", "고양", "용인", "성남", "부천", "안산", "화성", "남양주", "안양", "평택", "의정부", "파주", "시흥", "김포", "광명", "광주", "군포", "이천", "오산", "하남", "양주", "구리", "안성", "포천", "의왕", "여주", "양평", "동두천", "과천", "가평", "연천"], 
         "url": "https://www.gg.go.kr/contents/contents.do?ciIdx=1150&menuId=2909",
-        "selector": "#result > div.mt-4.py-4.w-100 > div > div > dl:nth-of-type(n+2) > dd > *:nth-of-type({})",
-        "sensor": (SELECTED_SENSORS([0,1]), [2,1]),
+        "selector": "#result > div.mt-4.py-4.w-100 > div > div > dl:nth-of-type(n+2) > dd > {}",
+        "sensor": (SELECTED_SENSORS([0,1]), ['strong:nth-of-type(1)','small:nth-of-type(1)']),
+        "attribute": {
+            SENSORS_LIST[1]: (SELECTED_ATTIBUTE([0, 1, 2]), ['small:nth-of-type(2)', 'small:nth-of-type(3)', 'strong:nth-of-type(1)']),
+        },
         "last_update": "#result > div.s-w-covid19 > section > h3 > small"
     },
     "강원": {
