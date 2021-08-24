@@ -3,7 +3,7 @@
 DOMAIN = "covid19_kr"
 BRAND = "HUIMANG2"
 MODEL = "COVID-19(KR)"
-SW_VERSION = "1.2.5"
+SW_VERSION = "1.2.6"
 ATTRIBUTION = "30분에 1번씩 보건복지부 크롤링"
 
 SENSORS = {
