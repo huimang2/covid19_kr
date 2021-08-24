@@ -23,7 +23,7 @@
 | v1.2.1  | 2020.08.19  | 코드 수정 |
 | v1.2.2  | 2020.08.22  | 시도와 도시의 이름이 같을 때 컴포넌트가 생성되지 않는 문제 수정 |
 | v1.2.3  | 2020.08.23  | 부산 센서 오류 수정 |
-| v1.2.4  | 2020.08.24  | 강원도 선택자 상수 수정 |
+| v1.2.5  | 2020.08.24  | 강원도 선택자 상수 수정 |
 
 <br>
 
@@ -82,6 +82,6 @@
 - 경북: https://gb.go.kr/corona_main.htm
 - 경남: http://xn--19-q81ii1knc140d892b.kr/main/main.do
 
-[version-shield]: https://img.shields.io/badge/version-v1.2.4-orange.svg
+[version-shield]: https://img.shields.io/badge/version-v1.2.5-orange.svg
 [hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
