@@ -3,7 +3,7 @@
 DOMAIN = "covid19_kr"
 BRAND = "HUIMANG2"
 MODEL = "COVID-19(KR)"
-SW_VERSION = "1.2.4"
+SW_VERSION = "1.2.5"
 ATTRIBUTION = "30분에 1번씩 보건복지부 크롤링"
 
 SENSORS = {
@@ -90,7 +90,7 @@ SIDO_LIST = {
         "url": "http://www.provin.gangwon.kr/covid-19.html",
         "selector": "table.skinTb > tbody > tr:nth-child(2n) > td:not([rowspan])",
         "sensor": (SELECTED_SENSORS([1]), [0]),
-        "last_update": "#main > div.inner > div.condition > h3 > span"
+        "last_update": "div.condition > h3 > span"
     },
     "충북": {
         "city": [], 
