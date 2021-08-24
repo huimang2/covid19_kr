@@ -88,7 +88,7 @@ SIDO_LIST = {
     "강원": {
         "city": ["춘천", "원주", "강릉", "동해", "태백", "속초", "삼척", "홍천", "횡성", "영월", "평창", "정선", "철원", "화천", "양구", "인제", "고성", "양양"], 
         "url": "http://www.provin.gangwon.kr/covid-19.html",
-        "selector": "#main > div.inner > div.condition > div > table > tbody > tr:nth-child(2n) > td:not([rowspan])",
+        "selector": "table.skinTb > tbody > tr:nth-child(2n) > td:not([rowspan])",
         "sensor": (SELECTED_SENSORS([1]), [0]),
         "last_update": "#main > div.inner > div.condition > h3 > span"
     },
