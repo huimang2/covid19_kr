@@ -26,6 +26,7 @@
 | v1.2.6  | 2020.08.24  | 강원도 선택자 상수 수정 |
 | v1.2.7  | 2020.08.24  | 선택자 nth-child 에서 nth-of-type 으로 수정 |
 | v1.2.8  | 2020.08.24  | nth-of-type 수정으로 인한 선택자 오류 수정 |
+| v1.2.9  | 2020.09.01  | 경기도 도시 신규확진자와 누적확진자 바껴 표시된 것 수정 |
 
 <br>
 
@@ -84,6 +85,6 @@
 - 경북: https://gb.go.kr/corona_main.htm
 - 경남: http://xn--19-q81ii1knc140d892b.kr/main/main.do
 
-[version-shield]: https://img.shields.io/badge/version-v1.2.8-orange.svg
+[version-shield]: https://img.shields.io/badge/version-v1.2.9-orange.svg
 [hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
