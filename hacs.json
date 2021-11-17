@@ -2,5 +2,7 @@
   "name": "[KR] 코로나 현황",
   "country": "KR",
   "domains": ["sensor"],
-  "render_readme": true
+  "render_readme": true,
+  "zip_release": true,
+  "filename": "covid19_kr.zip"
 }
