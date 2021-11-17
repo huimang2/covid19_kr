@@ -73,5 +73,8 @@ class CoronavirusSensor(CoordinatorEntity, SensorEntity):
             _attr = attr.pop(self.info_type)
             _attr.update(attr)
             attr = _attr
+        
+        if last_update := self.coordinator.data.get("last_update"):
+            attr["last_update"] = last_update
 
         return attr
