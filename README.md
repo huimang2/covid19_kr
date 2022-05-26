@@ -29,6 +29,7 @@
 | v1.2.9  | 2021.09.01  | 경기도 도시 신규확진자와 누적확진자 바껴 표시된 것 수정 |
 | v1.2.10  | 2021.11.18  | - 전국 시간표시 오류 수정<br>- 최종 갱신일(last_update) 속성 추가 |
 | v1.2.11 | 2022.05.26  | 전국 시간표시 오류 수정 |
+| v1.3.0  | 2022.05.27  | 전체적인 선택자 수정 |
 
 <br>
 
@@ -87,6 +88,6 @@
 - 경북: https://gb.go.kr/corona_main.htm
 - 경남: http://xn--19-q81ii1knc140d892b.kr/main/main.do
 
-[version-shield]: https://img.shields.io/badge/version-v1.2.11-orange.svg
+[version-shield]: https://img.shields.io/badge/version-v1.3.0-orange.svg
 [hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
